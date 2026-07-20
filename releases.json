@@ -16,10 +16,10 @@
       ],
       "source": {
         "gameRepository": "iconidentify/chonkblocker",
-        "gameCommit": "093d4b9349bdff8bb95683084f45d62be4782663",
-        "romSha256": "fd2fedecf0ea2b7e8c5269c84167be6f8e8908ba788ab0b053672dff5492176f",
+        "gameCommit": "8a8baae707b0b6ea7499b8ebb1a861fd63310535",
+        "romSha256": "93abd270e580ad81a68c245291d10009709068e12920c61fe25116fc7dfc1a89",
         "appRepository": "iconidentify/chonkblocker-retro",
-        "appCommit": "966f25d4d5c8d34cc4e6edffd176bc17a7d0fd24"
+        "appCommit": "aea0a5364ebefa24779c46ee87f57d33205aa4a9"
       },
       "assets": [
         {
@@ -28,7 +28,7 @@
           "platform": "SNES / LoROM",
           "filename": "Chonk-Blocker-Retro-1.0.0.sfc",
           "checksumFilename": "Chonk-Blocker-Retro-1.0.0.sfc.sha256",
-          "sha256": "fd2fedecf0ea2b7e8c5269c84167be6f8e8908ba788ab0b053672dff5492176f",
+          "sha256": "93abd270e580ad81a68c245291d10009709068e12920c61fe25116fc7dfc1a89",
           "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.0/Chonk-Blocker-Retro-1.0.0.sfc"
         },
         {
@@ -37,7 +37,7 @@
           "platform": "Apple silicon",
           "filename": "Chonk-Blocker-Retro-1.0.0-macos-arm64.dmg",
           "checksumFilename": "Chonk-Blocker-Retro-1.0.0-macos-arm64.dmg.sha256",
-          "sha256": "2708c224bcb891632bc64df3db9bf7877e8c0bc32a676f7c591e4b7415103526",
+          "sha256": "901fedc903551838a9f557b67e47655f25afdb7d5927963feefc2080b15208b3",
           "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.0/Chonk-Blocker-Retro-1.0.0-macos-arm64.dmg"
         },
         {
@@ -46,7 +46,7 @@
           "platform": "x86-64",
           "filename": "Chonk-Blocker-Retro-1.0.0-windows-x64.zip",
           "checksumFilename": "Chonk-Blocker-Retro-1.0.0-windows-x64.zip.sha256",
-          "sha256": "8d01c5047e582a40caeff37b819c6e07dde2f13f95280eca86fdb65ccd7b9eeb",
+          "sha256": "785ba83107c4ea8714dd73cffbd423e487e7844f64b0ee86d3ca54e1b461801e",
           "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.0/Chonk-Blocker-Retro-1.0.0-windows-x64.zip"
         },
         {
@@ -55,7 +55,7 @@
           "platform": "x86-64 AppImage",
           "filename": "Chonk-Blocker-Retro-1.0.0-linux-x86_64.AppImage",
           "checksumFilename": "Chonk-Blocker-Retro-1.0.0-linux-x86_64.AppImage.sha256",
-          "sha256": "4e187e3c3d1bc5d0e453b8b47a2c414e7d16ffdb6cbcfaa63acb8d7f241cf5c7",
+          "sha256": "6f3c4490cb51ef407a11692a01af24303f041322cfcf02ca8e135ab67bce7b4e",
           "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.0/Chonk-Blocker-Retro-1.0.0-linux-x86_64.AppImage"
         }
       ],
