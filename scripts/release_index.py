@@ -126,6 +126,7 @@ def validate(payload: Path) -> dict:
 def write_index(payload: Path, repository: Path) -> None:
     manifest = validate(payload)
     version = manifest["version"]
+    rom = next(row for row in manifest["assets"] if row["kind"] == "rom")
     release_dir = repository / "releases"
     release_dir.mkdir(parents=True, exist_ok=True)
     summary = release_summary(manifest)
@@ -151,6 +152,12 @@ def write_index(payload: Path, repository: Path) -> None:
 
     public_notes = release_dir / f"v{version}.md"
     shutil.copyfile(payload / "release-notes.md", public_notes)
+    browser_dir = repository / "browser"
+    browser_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(
+        payload / "artifacts" / rom["filename"],
+        browser_dir / "Chonk-Blocker-Retro.sfc",
+    )
     print(f"updated public index for Chonk Blocker Retro {version}")
 
 

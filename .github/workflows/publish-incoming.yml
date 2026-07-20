@@ -66,7 +66,12 @@ jobs:
           python3 scripts/release_index.py update-index "$payload_copy" .
           git config user.name 'chonkblocker-release-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add latest.json releases.json "releases/v$RELEASE_VERSION.json" "releases/v$RELEASE_VERSION.md"
+          git add \
+            latest.json \
+            releases.json \
+            "releases/v$RELEASE_VERSION.json" \
+            "releases/v$RELEASE_VERSION.md" \
+            browser/Chonk-Blocker-Retro.sfc
           if ! git diff --cached --quiet; then
             git commit -m "Publish Chonk Blocker Retro $RELEASE_VERSION"
             git push origin master
