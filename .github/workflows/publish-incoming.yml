@@ -20,8 +20,6 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Validate incoming release
-        run: python3 scripts/release_index.py validate payload
       - name: Resolve release metadata
         id: release
         shell: bash
@@ -32,20 +30,29 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "tag=v$version" >> "$GITHUB_OUTPUT"
           echo "title=$title" >> "$GITHUB_OUTPUT"
-      - name: Create or update public release
+      - name: Download and validate published assets
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          set -euo pipefail
+          mkdir -p payload/artifacts "$RUNNER_TEMP/release-metadata"
+          gh release download "$RELEASE_TAG" \
+            --pattern 'Chonk-Blocker-Retro-*' \
+            --dir payload/artifacts
+          gh release download "$RELEASE_TAG" \
+            --pattern release.json \
+            --dir "$RUNNER_TEMP/release-metadata"
+          cmp payload/release.json "$RUNNER_TEMP/release-metadata/release.json"
+          python3 scripts/release_index.py validate payload
+      - name: Finalize public release notes
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ steps.release.outputs.tag }}
           RELEASE_TITLE: ${{ steps.release.outputs.title }}
-        run: |
-          set -euo pipefail
-          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
-            gh release edit "$RELEASE_TAG" --title "$RELEASE_TITLE" --notes-file payload/release-notes.md
-          else
-            gh release create "$RELEASE_TAG" --target master --title "$RELEASE_TITLE" --notes-file payload/release-notes.md
-          fi
-          gh release upload "$RELEASE_TAG" payload/artifacts/* payload/release.json --clobber
+        run: gh release edit "$RELEASE_TAG" --title "$RELEASE_TITLE" --notes-file payload/release-notes.md
       - name: Update public version index
         shell: bash
         env:
