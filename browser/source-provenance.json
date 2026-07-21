@@ -1,7 +1,7 @@
 {
   "gameRepository": "iconidentify/chonkblocker",
-  "gameCommit": "6647ccf06eb7ffc82fe08d27f7292183dd041ccf",
-  "romSha256": "b66357abafc553394b34a7f4d2e8842dbb07bcc1914c54fe6952bdadce85f04d",
-  "builtAt": "2026-07-21T03:44:46.183891Z",
-  "release": "1.0.4"
+  "gameCommit": "35ab6d4d0dd962c914cc7dcb2d0b0a89e11df200",
+  "romSha256": "1d82ebcd13ff473d7395a0f69976d1a3cc5e7f6907321a3bcb0e0388e23d2de3",
+  "builtAt": "2026-07-21T07:34:43Z",
+  "release": "1.0.6"
 }
