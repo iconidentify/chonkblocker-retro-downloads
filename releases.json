@@ -1,6 +1,66 @@
 {
-  "current": "1.0.1",
+  "current": "1.0.2",
   "releases": [
+    {
+      "version": "1.0.2",
+      "tag": "v1.0.2",
+      "publishedAt": "2026-07-20",
+      "title": "Chonk Blocker Retro 1.0.2",
+      "summary": "A cartridge update that adds a hidden, native 16-bit sound lab for auditioning the complete Chonk Blocker soundtrack and effects catalog.",
+      "notes": [
+        "Open the hidden Chonk Lab from the SNES title menu by holding L + R + Select, then pressing Start.",
+        "Browse and play all ten named Terrific Audio music tracks directly from the cartridge.",
+        "Switch to an isolated sound-effects catalog containing all sixteen named effects, with scrolling, playback status, and a global silence control.",
+        "Exit cleanly back to the normal title menu; the utility shell is structured to host additional internal cartridge tools in future updates.",
+        "Ship the same approved 256 KiB ROM in the browser player, standalone download, and signed macOS and Windows editions, with a Linux AppImage and SHA-256 checksums."
+      ],
+      "source": {
+        "gameRepository": "iconidentify/chonkblocker",
+        "gameCommit": "472ba22ce21671b6e7e0b3513194713fa0570165",
+        "romSha256": "bf6f60fd6d0381508401d0fd7a145445950efd11e3240c8b26799a78c37a66f6",
+        "appRepository": "iconidentify/chonkblocker-retro",
+        "appCommit": "21d0b43d0d2c00cb1b54095b844d4293cbd0d40d"
+      },
+      "assets": [
+        {
+          "kind": "rom",
+          "label": "Standalone SNES ROM",
+          "platform": "SNES / LoROM",
+          "filename": "Chonk-Blocker-Retro-1.0.2.sfc",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.2.sfc.sha256",
+          "sha256": "bf6f60fd6d0381508401d0fd7a145445950efd11e3240c8b26799a78c37a66f6",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.2/Chonk-Blocker-Retro-1.0.2.sfc"
+        },
+        {
+          "kind": "macos",
+          "label": "macOS",
+          "platform": "Apple silicon",
+          "filename": "Chonk-Blocker-Retro-1.0.2-macos-arm64.dmg",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.2-macos-arm64.dmg.sha256",
+          "sha256": "176666bbb6560bfb66b7fe12e112c078dea47fb27ef1c276d0255cfa2aca810b",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.2/Chonk-Blocker-Retro-1.0.2-macos-arm64.dmg"
+        },
+        {
+          "kind": "windows",
+          "label": "Windows",
+          "platform": "x86-64",
+          "filename": "Chonk-Blocker-Retro-1.0.2-windows-x64.zip",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.2-windows-x64.zip.sha256",
+          "sha256": "586927f3b50349852a7b12c096fc4266470c9d4c2847471d14387ca30fd9a824",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.2/Chonk-Blocker-Retro-1.0.2-windows-x64.zip"
+        },
+        {
+          "kind": "linux",
+          "label": "Linux",
+          "platform": "x86-64 AppImage",
+          "filename": "Chonk-Blocker-Retro-1.0.2-linux-x86_64.AppImage",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.2-linux-x86_64.AppImage.sha256",
+          "sha256": "5fc49e743d17f371f99fb3566d86e64720b1630042156a27ee4dc3c871204aba",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.2/Chonk-Blocker-Retro-1.0.2-linux-x86_64.AppImage"
+        }
+      ],
+      "releaseUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/tag/v1.0.2"
+    },
     {
       "version": "1.0.1",
       "tag": "v1.0.1",
