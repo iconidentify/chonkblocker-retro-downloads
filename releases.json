@@ -1,6 +1,67 @@
 {
-  "current": "1.0.3",
+  "current": "1.0.7",
   "releases": [
+    {
+      "version": "1.0.7",
+      "tag": "v1.0.7",
+      "publishedAt": "2026-07-22",
+      "title": "Chonk Blocker Retro 1.0.7",
+      "summary": "Linux desktop fixes: stable focus and pause behavior on Wayland compositors, resilient audio across focus changes, and correct fullscreen scaling.",
+      "notes": [
+        "Treat the native game surface and the desktop window as a single focus owner and only pause after a short grace period confirms focus left the application, so hovering no longer pauses or mutes the game under focus-follows-mouse compositors such as Hyprland and Sway.",
+        "Mute audio at the producer during pauses instead of stopping and flushing the device line; rapid stop/flush cycles wedged PipeWire's ALSA bridge and left the game permanently silent after focus changes.",
+        "Reopen the audio device automatically after a mid-write failure instead of going silent, and hold a deeper 96 ms startup cushion so PipeWire's first burst reads cannot underrun a freshly primed line.",
+        "Release the OpenGL surface lock between frames on Linux and wait for the game surface to adopt its new size before resuming, so compositor-driven fullscreen and resizes apply instead of timing out after five seconds and leaving the output at its old size.",
+        "Export _JAVA_AWT_WM_NONREPARENTING=1 from the AppImage launcher on wlroots compositors and declare StartupWMClass so docks and taskbars group the window correctly.",
+        "Ship the exact 1.0.6 cartridge unchanged; this release updates the desktop application only."
+      ],
+      "source": {
+        "gameRepository": "iconidentify/chonkblocker",
+        "gameCommit": "35ab6d4d0dd962c914cc7dcb2d0b0a89e11df200",
+        "romSha256": "1d82ebcd13ff473d7395a0f69976d1a3cc5e7f6907321a3bcb0e0388e23d2de3",
+        "appRepository": "iconidentify/chonkblocker-retro",
+        "appCommit": "126b7010ca933d1ecbffe984ae18436c9a77ea39"
+      },
+      "assets": [
+        {
+          "kind": "rom",
+          "label": "Standalone SNES ROM",
+          "platform": "SNES / LoROM",
+          "filename": "Chonk-Blocker-Retro-1.0.7.sfc",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.7.sfc.sha256",
+          "sha256": "1d82ebcd13ff473d7395a0f69976d1a3cc5e7f6907321a3bcb0e0388e23d2de3",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.7/Chonk-Blocker-Retro-1.0.7.sfc"
+        },
+        {
+          "kind": "macos",
+          "label": "macOS",
+          "platform": "Apple silicon",
+          "filename": "Chonk-Blocker-Retro-1.0.7-macos-arm64.dmg",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.7-macos-arm64.dmg.sha256",
+          "sha256": "011502d7eb77653fa8c3957564620d7fba96f59ab56d0378b1975f97b6c2981c",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.7/Chonk-Blocker-Retro-1.0.7-macos-arm64.dmg"
+        },
+        {
+          "kind": "windows",
+          "label": "Windows",
+          "platform": "x86-64",
+          "filename": "Chonk-Blocker-Retro-1.0.7-windows-x64.zip",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.7-windows-x64.zip.sha256",
+          "sha256": "5d10883af5795d84bbb60d80cef235ebfad4b9f9b34f8b29fa17ae0037678e01",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.7/Chonk-Blocker-Retro-1.0.7-windows-x64.zip"
+        },
+        {
+          "kind": "linux",
+          "label": "Linux",
+          "platform": "x86-64 AppImage",
+          "filename": "Chonk-Blocker-Retro-1.0.7-linux-x86_64.AppImage",
+          "checksumFilename": "Chonk-Blocker-Retro-1.0.7-linux-x86_64.AppImage.sha256",
+          "sha256": "4fcb21c88fc60bed941460270961ffdb2a7618e21e95df7d879e9a7cb3033ea3",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.0.7/Chonk-Blocker-Retro-1.0.7-linux-x86_64.AppImage"
+        }
+      ],
+      "releaseUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/tag/v1.0.7"
+    },
     {
       "version": "1.0.3",
       "tag": "v1.0.3",
