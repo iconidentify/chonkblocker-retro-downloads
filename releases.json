@@ -1,6 +1,66 @@
 {
-  "current": "1.0.9",
+  "current": "1.1.0",
   "releases": [
+    {
+      "version": "1.1.0",
+      "tag": "v1.1.0",
+      "publishedAt": "2026-07-22",
+      "title": "Chonk Blocker Retro 1.1.0",
+      "summary": "An elegant way out: closing the game now opens a cabinet-styled confirmation instead of quitting instantly, with a quit action reachable from settings and keyboard shortcuts.",
+      "notes": [
+        "Open a Leave the Arcade confirmation sheet when the window is closed, Alt+F4 or Ctrl+Q is pressed (\u2318Q on macOS), or the new QUIT GAME button in settings is used \u2014 the game no longer ends without asking.",
+        "Keep playing is the safe default: Enter chooses the highlighted action, arrow keys switch between Keep Playing and Exit Game, and Escape always returns to the game.",
+        "Pause emulation and mute audio while the sheet is open, and return keyboard focus to the game seamlessly on resume.",
+        "Add a quit path reachable in fullscreen, where the window's close button is not available.",
+        "Ship the 1.0.8 cartridge unchanged."
+      ],
+      "source": {
+        "gameRepository": "iconidentify/chonkblocker",
+        "gameCommit": "6647ccf06eb7ffc82fe08d27f7292183dd041ccf",
+        "romSha256": "b66357abafc553394b34a7f4d2e8842dbb07bcc1914c54fe6952bdadce85f04d",
+        "appRepository": "iconidentify/chonkblocker-retro",
+        "appCommit": "ea647f2fd89af73af5a8c9e9a9a0b66e01b0935f"
+      },
+      "assets": [
+        {
+          "kind": "rom",
+          "label": "Standalone SNES ROM",
+          "platform": "SNES / LoROM",
+          "filename": "Chonk-Blocker-Retro-1.1.0.sfc",
+          "checksumFilename": "Chonk-Blocker-Retro-1.1.0.sfc.sha256",
+          "sha256": "b66357abafc553394b34a7f4d2e8842dbb07bcc1914c54fe6952bdadce85f04d",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.1.0/Chonk-Blocker-Retro-1.1.0.sfc"
+        },
+        {
+          "kind": "macos",
+          "label": "macOS",
+          "platform": "Apple silicon",
+          "filename": "Chonk-Blocker-Retro-1.1.0-macos-arm64.dmg",
+          "checksumFilename": "Chonk-Blocker-Retro-1.1.0-macos-arm64.dmg.sha256",
+          "sha256": "fb58cea289f61fd069e1aa08a8fdb0f79db254d17dc4829664c2e2c462c024c0",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.1.0/Chonk-Blocker-Retro-1.1.0-macos-arm64.dmg"
+        },
+        {
+          "kind": "windows",
+          "label": "Windows",
+          "platform": "x86-64",
+          "filename": "Chonk-Blocker-Retro-1.1.0-windows-x64.zip",
+          "checksumFilename": "Chonk-Blocker-Retro-1.1.0-windows-x64.zip.sha256",
+          "sha256": "6892eacb14613b0395ac736a493f17194a9e657ecc901caefbf27dbe79ddba34",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.1.0/Chonk-Blocker-Retro-1.1.0-windows-x64.zip"
+        },
+        {
+          "kind": "linux",
+          "label": "Linux",
+          "platform": "x86-64 AppImage",
+          "filename": "Chonk-Blocker-Retro-1.1.0-linux-x86_64.AppImage",
+          "checksumFilename": "Chonk-Blocker-Retro-1.1.0-linux-x86_64.AppImage.sha256",
+          "sha256": "8a79dafb590eed2c7ec9ca6dd7e0bc99f12c87c5eefba1df5467196b129d67f2",
+          "downloadUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/download/v1.1.0/Chonk-Blocker-Retro-1.1.0-linux-x86_64.AppImage"
+        }
+      ],
+      "releaseUrl": "https://github.com/iconidentify/chonkblocker-retro-downloads/releases/tag/v1.1.0"
+    },
     {
       "version": "1.0.9",
       "tag": "v1.0.9",
